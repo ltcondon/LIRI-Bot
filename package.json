@@ -1,0 +1,23 @@
+{
+  "name": "LIRI-Bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "LIRI-bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ltcondon/LIRI-Bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ltcondon/LIRI-Bot/issues"
+  },
+  "homepage": "https://github.com/ltcondon/LIRI-Bot#readme",
+  "dependencies": {
+    "inquirer": "^6.2.2"
+  }
+}
