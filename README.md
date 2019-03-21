@@ -20,19 +20,19 @@ Take a look at LIRI in action below!
 ### Go LIRI, Go!
 
 #### Here is LIRI performing a movie search:
-![opener](images/LIRI-movie-gif.gif)
+![](images/LIRI-movie-gif.gif)
 Isn't she wonderful?!
 
 #### Here is LIRI performing a concert search:
-![opener](images/LIRI-concert-gif.gif)
+![](images/LIRI-concert-gif.gif)
 Isn't she breathtaking?!
 
 #### Here is LIRI performing a Spotify search:
-![opener](images/LIRI-spotify-gif.gif)
+![](images/LIRI-spotify-gif.gif)
 Isn't she heartwrenchingly fantastic?!
 
 #### Here is LIRI doing what it says:
-![opener](images/LIRI-what-it-says-gif.gif)
+![](images/LIRI-what-it-says-gif.gif)
 Isn't she just drop-dead gorgeous?!
 
 
