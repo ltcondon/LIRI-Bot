@@ -1,5 +1,5 @@
 {
-  "name": "LIRI-Bot",
+  "name": "LIRI-bot",
   "version": "1.0.0",
   "description": "",
   "main": "LIRI-bot.js",
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/ltcondon/LIRI-Bot#readme",
   "dependencies": {
     "axios": "^0.18.0",
+    "chalk": "^2.4.2",
     "dotenv": "^7.0.0",
     "inquirer": "^6.2.2",
     "moment": "^2.24.0",
