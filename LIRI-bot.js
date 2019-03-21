@@ -88,7 +88,7 @@ function findMusic() {
         name: "type"
         },
         {
-        message: "Okay then. What " + this.type + " can I help you find?",
+        message: "Okay then. What can I help you find?",
         name: "search"
         }
     ]).then(function(response) {
@@ -99,7 +99,12 @@ function findMusic() {
             spotify
             .search({ type: 'track', query: searchTerm })
             .then(function(response) {
-                console.log(response.tracks.items[0]);
+                console.log("\nTrack name: " + response.tracks.items[0].name);
+                console.log("\nArtist(s): " + response.tracks.items[0].artists[0].name);
+                console.log("\nAlbum: " + response.tracks.items[0].album.name);
+                console.log("\nPreview: " + response.tracks.items[0].external_urls.spotify);
+
+
             })
             .catch(function(err) {
                 console.log(err);
