@@ -4,8 +4,6 @@
 
 # Summary
 
-![generated](assets/images/genereated-screenshot.png)
-
 LIRI-Bot is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and Recognition Interface, LIRI is a Language Interpretation and Recognition Interface. LIRI-Bot is a command line node app that takes in parameters ('spotify-this', 'movie-this', 'concert-this', and 'do-what-it-says'), and gives the user back data in the terminal.
 
 ## Technology
