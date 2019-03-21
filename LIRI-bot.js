@@ -29,11 +29,17 @@ switch (searchType) {
     break;
   default:
         console.log("Sorry, I don't understand that command :'(");
+        console.log(`
+                \\   ^__^
+                 \\  (oo)\\_______
+                    (__)\\       )\\/\\
+                        ||----w |
+                        ||     ||`,)
 }
 
 // ========= OMDB script ========= //
 function findMovie() {
-
+    console.log("\nSearching...\n\n")
     var movieName = process.argv.slice(3).join("+");
 
     // Axios 'OMDB' request
@@ -42,24 +48,24 @@ function findMovie() {
     axios.get(queryUrl)
     .then(
         function(response) {
-            console.log("Title: " + response.data.Title + "\n");
-            console.log("Year: " + response.data.Year + "\n");
-            console.log("Released: " + response.data.Released + "\n");
+            console.log("\nTitle: " + response.data.Title);
+            console.log("Released: " + response.data.Released);
             console.log("IMDB Rating: " + response.data.imdbRating + "\n");
             console.log("Plot: " + response.data.Plot + "\n");
             console.log("Cast: " + response.data.Actors + "\n");
-            console.log("Country: " + response.data.Country + "\n");
-            console.log("Language: " + response.data.Language + "\n");
+            console.log("Country: " + response.data.Country);
+            console.log("Language: " + response.data.Language + "\n\n\n\n\n\n");
             // console.log(response);
         }
     );
 
     // This line is just to help us debug against the actual URL.
-    console.log(queryUrl);
+    // console.log(queryUrl);
 }
 
 // ====== BandsInTown script ====== //
 function findConcert() {
+    console.log("\nSearching...\n\n")
     var artist = process.argv.slice(3).join("+");
     // Axios 'BandsInTown' request
     var queryUrl = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp";
@@ -68,15 +74,16 @@ function findConcert() {
     .then(
         function(response) {
             // console.log(response.data[0]);
+            console.log("\n\nNext show near you:" + "\n\n\n")
             console.log("Venue: " + response.data[0].venue.name + "\n");
             console.log("Location: " + response.data[0].venue.city + ", " + response.data[0].venue.region + "\n");
             var showTime = new Date(response.data[0].datetime);
-            console.log("Time: " + showTime + "\n");
+            console.log("Time: " + showTime + "\n\n\n\n\n\n");
         }
     );
 
     // This line is just to help us debug against the actual URL.
-    console.log(queryUrl);
+    // console.log(queryUrl);
 }
 
 // ======== Spotify script ======== //
@@ -93,6 +100,8 @@ function findMusic() {
         name: "search"
         }
     ]).then(function(response) {
+    console.log("\nSearching...\n\n")
+
         var searchTerm = response.search;
 
         switch(response.type) {
@@ -103,7 +112,7 @@ function findMusic() {
                 console.log("\nTrack name: " + response.tracks.items[0].name);
                 console.log("\nArtist(s): " + response.tracks.items[0].artists[0].name);
                 console.log("\nAlbum: " + response.tracks.items[0].album.name);
-                console.log("\nPreview: " + response.tracks.items[0].external_urls.spotify);
+                console.log("\nPreview: " + response.tracks.items[0].external_urls.spotify + "\n\n\n\n\n\n");
             })
             .catch(function(err) {
                 console.log(err);
@@ -115,7 +124,7 @@ function findMusic() {
             .search({ type: 'artist', query: searchTerm })
             .then(function(response) {
                 console.log("\nArtist(s): " + response.artists.items[0].name);
-                console.log("\nPreview: " + response.artists.items[0].external_urls.spotify);
+                console.log("\nPreview: " + response.artists.items[0].external_urls.spotify + "\n\n\n\n\n\n");
 
             })
             .catch(function(err) {
@@ -130,6 +139,8 @@ function findMusic() {
 
 // ===== 'what-it-says' script ===== //
 function whatItSays () {
+    console.log("\nYou gotta check this jam, holmes!\n\n")
+    
     fs.readFile('random.txt', 'utf8', function(err, data) {
         if (err) {
             console.log(data);
@@ -140,7 +151,7 @@ function whatItSays () {
                 console.log("\nTrack name: " + response.tracks.items[0].name);
                 console.log("\nArtist(s): " + response.tracks.items[0].artists[0].name);
                 console.log("\nAlbum: " + response.tracks.items[0].album.name);
-                console.log("\nPreview: " + response.tracks.items[0].external_urls.spotify);
+                console.log("\nPreview: " + response.tracks.items[0].external_urls.spotify + "\n\n\n\n\n\n");
             })
             .catch(function(err) {
                 console.log(err);
